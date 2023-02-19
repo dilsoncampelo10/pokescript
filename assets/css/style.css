@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/pokeball_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+.container{
+    margin: 1rem;
+}
+.container h1{
+    margin-bottom: 30px;
+}
+.types{
+    display: flex;
+    flex-direction: column;
+}
+.number{
+    align-self: flex-end;
+}
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 95, 69);
+    margin: .5rem;
+    padding: .5rem;
+    color: #fff;
+  
+    border-radius: 1rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pokemon img{
+    width: 100px;
+}
+#pokemonList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+}
+
+.btn{
+    background-color: rgb(54, 135, 211);
+    color: #fff;
+    font-size: 1.2rem;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media(min-width:700px){
+    #pokemonList{
+     
+        grid-template-columns: 1fr 1fr 1fr;
+       
+    }
+}
+
+@media(min-width:1024px){
+    #pokemonList{
+     
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       
+    }
+}
+
+@media(min-width:1500px){
+    #pokemonList{
+     
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       
+    }
+}
+@media(min-width:2000px){
+    #pokemonList{
+     
+        grid-template-columns: repeat(6,1fr);
+       
+    }
+}
