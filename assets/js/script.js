@@ -28,7 +28,7 @@ let a = fetch(url)
             .then((jsonPoke)=> {
                 let htmlPokemon = createPokemon(jsonPoke);
                 pokemonList.innerHTML += htmlPokemon;
-                console.log(jsonPoke.types[0].type.name)
+              
                
             })
            
