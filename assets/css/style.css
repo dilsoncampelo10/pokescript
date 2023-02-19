@@ -74,6 +74,9 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
        
     }
+    .pokemon img{
+        width: 150px;
+    }
 }
 
 @media(min-width:1500px){
