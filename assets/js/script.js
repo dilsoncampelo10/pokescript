@@ -1,6 +1,5 @@
-const limit = 10;
-const offset = 0;
-const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+
+
 
 const pokemonList = document.querySelector('#pokemonList');
 
@@ -19,22 +18,16 @@ let createPokemon = (pokemon) =>{
     
 }
 
-let a = fetch(url)
-    .then((request)=> request.json())
-    .then((json)=> json.results)
+pokeApi.getPokemons()
     .then((pokemon)=>{
         pokemon.map((pokemons)=>{
-            fetch(pokemons.url).then((details)=> details.json())
-            .then((jsonPoke)=> {
-                let htmlPokemon = createPokemon(jsonPoke);
-                pokemonList.innerHTML += htmlPokemon;
-              
-               
-            })
+           
+            let list = createPokemon(pokemons);
+            pokemonList.innerHTML += list;
            
         })
         
 
     })
-    .catch((err)=> console.error(`Erro: ${err}`))
+    
 
