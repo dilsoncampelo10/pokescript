@@ -3,6 +3,7 @@ class Pokemon {
     _name;
     _types = [];
     _type;
+    _image;
 
     setId(id){
         this._id = id;
@@ -17,7 +18,7 @@ class Pokemon {
         return this._name;
     }
     setTypes(types=[]){
-        this._types = types;
+        this._types.push(types)
     }
     getTypes(){
         return this._types;
@@ -27,6 +28,12 @@ class Pokemon {
     }
     getType(){
         return this._type;
+    }
+    setImage(image){
+        this._image = image; 
+    }
+    getImage(){
+        return this._image;
     }
    
 }

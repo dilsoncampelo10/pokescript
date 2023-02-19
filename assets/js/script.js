@@ -1,18 +1,14 @@
-
-
-
 const pokemonList = document.querySelector('#pokemonList');
 
-let createPokemon = (pokemon) =>{
+const createPokemon = (pokemon) =>{
     return `<li class="pokemon">
-                <span class="number">#${pokemon.order}</span>
-                <h2 class="name">${pokemon.name}</h2>
+                <span class="number">#${pokemon.getId()}</span>
+                <h2 class="name">${pokemon.getName()}</h2>
                 <div class="content">
                     <div class="types">
-                        <span>${pokemon.types[0].type.name}</span>
-                        
+                      ${pokemon.getTypes().map((type)=> `<span>${type}</span>`)}
                     </div>
-                    <div><img src="${pokemon.sprites.other.home.front_default}" alt="Bulbasaur"></div>
+                    <div><img src="${pokemon.getImage()}" alt="Bulbasaur"></div>
                 </div>
             </li>`
     
