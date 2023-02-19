@@ -26,13 +26,19 @@ const loadPokemons = (offset,limit) => {
         pokemon.map((pokemons)=>{
             let list = createPokemon(pokemons);
             pokemonList.innerHTML += list;
-            console.log(pokemons)
         })
     })
+
+   
 }
 loadPokemons(offset,limit);
 
 btnMore.addEventListener('click',()=>{
     offset += limit;
+    if(offset >= 885){
+        btnMore.style.display = 'none';
+    }
+  
     loadPokemons(offset,limit);
 })
+
