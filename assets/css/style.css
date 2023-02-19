@@ -23,7 +23,7 @@ body{
     flex-direction: column;
 }
 .type{
-    border-radius: .2rem;
+    border-radius: 1rem;
     padding: .2rem;
     filter: brightness(1.1);
     margin-bottom: .5rem;
@@ -55,7 +55,7 @@ body{
 }
 #pokemonList{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     list-style: none;
 }
 
@@ -87,6 +87,13 @@ body{
 .dark{background-color: #8D6955;}
 .steel{background-color: #C3C2D9;}
 .fairy{background-color: #FAADFD;}
+@media(min-width:400px){
+    #pokemonList{
+     
+        grid-template-columns: 1fr 1fr;
+       
+    }
+}
 @media(min-width:700px){
     #pokemonList{
      

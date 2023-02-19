@@ -1,4 +1,8 @@
 const pokemonList = document.querySelector('#pokemonList');
+const btnMore = document.querySelector('#more-pokemon');
+
+let offset = 0;
+let limit = 12;
 
 const createPokemon = (pokemon) =>{
     return `<li class="pokemon ${pokemon.getType()}">
@@ -14,17 +18,21 @@ const createPokemon = (pokemon) =>{
     
 }
 
-pokeApi.getPokemons()
+
+
+const loadPokemons = (offset,limit) => {
+    pokeApi.getPokemons(offset,limit)
     .then((pokemon)=>{
         pokemon.map((pokemons)=>{
-           
             let list = createPokemon(pokemons);
             pokemonList.innerHTML += list;
             console.log(pokemons)
-           
         })
-        
-
     })
-    
+}
+loadPokemons(offset,limit);
 
+btnMore.addEventListener('click',()=>{
+    offset += limit;
+    loadPokemons(offset,limit);
+})
