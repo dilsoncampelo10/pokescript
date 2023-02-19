@@ -2,7 +2,7 @@ const pokeApi = {}
 
 const modelPokemon = (pokemonModel) => {
     const pokemon = new Pokemon();
-    pokemon.setId(pokemonModel.order);
+    pokemon.setId(pokemonModel.id);
     pokemon.setName(pokemonModel.name);
     pokemon.setTypes(pokemonModel.types.map((slot)=>slot.type.name));
     pokemon.setType(pokemon.getTypes()[0]);

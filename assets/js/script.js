@@ -12,7 +12,7 @@ const createPokemon = (pokemon) =>{
                     <div class="types">
                       ${pokemon.getTypes().map((type)=> `<span class="type ${type}">${type}</span>`).join('')}
                     </div>
-                    <div><img src="${pokemon.getImage()}" alt="Bulbasaur"></div>
+                    <div><img src="${pokemon.getImage()}" alt="${pokemon.getName()}"></div>
                 </div>
             </li>`
     
