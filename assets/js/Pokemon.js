@@ -18,7 +18,7 @@ class Pokemon {
         return this._name;
     }
     setTypes(types=[]){
-        this._types.push(types)
+        this._types = types
     }
     getTypes(){
         return this._types;

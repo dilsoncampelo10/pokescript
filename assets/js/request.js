@@ -4,8 +4,8 @@ const modelPokemon = (pokemonModel) => {
     const pokemon = new Pokemon();
     pokemon.setId(pokemonModel.order);
     pokemon.setName(pokemonModel.name);
-    pokemon.setTypes(pokemonModel.types.map((slot)=>{slot.type.name}));
-    pokemon.setType(pokemon.getTypes[0]);
+    pokemon.setTypes(pokemonModel.types.map((slot)=>slot.type.name));
+    pokemon.setType(pokemon.getTypes()[0]);
     pokemon.setImage(pokemonModel.sprites.other.home.front_default);
 
     return pokemon;

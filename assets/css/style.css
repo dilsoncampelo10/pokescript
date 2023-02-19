@@ -22,6 +22,16 @@ body{
     display: flex;
     flex-direction: column;
 }
+.type{
+    border-radius: .2rem;
+    padding: .2rem;
+    filter: brightness(1.1);
+    margin-bottom: .5rem;
+}
+.name{
+    text-transform: capitalize;
+}
+
 .number{
     align-self: flex-end;
 }
@@ -32,7 +42,7 @@ body{
     margin: .5rem;
     padding: .5rem;
     color: #fff;
-  
+    cursor: pointer;
     border-radius: 1rem;
 }
 .content{
@@ -59,7 +69,24 @@ body{
     cursor: pointer;
     border-radius: 10px;
 }
-
+.normal{background-color: #C6C8C0;}
+.grass{background-color: #8CD651;}
+.fire{background-color: #FA5643;}
+.water{background-color: #55AFFE;}
+.fighting{background-color: #A95646;}
+.flying{background-color: #7AA4FF;}
+.poison{background-color: #A45C96;}
+.ground{background-color: #EFD05D;}
+.rock{background-color: #CCBD73;}
+.bug{background-color: #C2D11E;}
+.ghost{background-color: #7975D6;}
+.electric{background-color: #FCE443;}
+.psychic{background-color: #F966B3;}
+.ice{background-color: #97F2FF;}
+.dragon{background-color: #8975FF;}
+.dark{background-color: #8D6955;}
+.steel{background-color: #C3C2D9;}
+.fairy{background-color: #FAADFD;}
 @media(min-width:700px){
     #pokemonList{
      
